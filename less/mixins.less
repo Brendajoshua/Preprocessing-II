@@ -1,1 +1,10 @@
 // Mixins in here
+
+header {
+    .flex-baseline(space-between);
+    padding: 1rem;
+    
+    @mobileview {
+        flex-direction: column;
+    }
+}
