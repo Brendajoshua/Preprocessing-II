@@ -1,61 +1,86 @@
-.home {
+// home
+.parent-container{
+  display: flex;
+  width:900px;
+  margin: auto;
+  padding: 50px;
+  flex-direction: column;
+  border: 1px solid red;
+}
+.top-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .section-border(@silver);
+}
+.top-image{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+}
+.container-text{
+  .layout(no-wrap, column);
+  .align(10px, 10px);
+}
+.content-section{
+.layout(wrap,row);
+.align(10px, 10px); 
+justify-content: space-between;
 
-  .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.text-content{
+  width: 48%;
+}
+.img-content{
+  width:48%;
+  .round-borders (12px, hidden);
+}
+}
+.content-section2{
+  .layout(wrap,row);
+  .align(10px, 10px); 
+  justify-content: space-between;
+  .section-border(@silver);
+  .text-content{
+  width: 48%;
+}
+.img-content{
+  width: 48%;
+  .round-borders (12px, hidden);
+}
+}
+.content-destination{
+  .align(10px, 30px); 
+  .section-border(@silver);
+  padding-left: 100px;
 
-   
-    
-    .text-content {
-      width: 48%;
-      padding-right: 1%;
-    }
-
-    .img-content {
-      width: 48%;
-      padding-left: 1%;
-
-      img {
-        border-radius: 10px;
-      }
-    }
+  .destination-text{
+    width:600px;
   }
-
-  .inverse-content {
-    padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
-
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
-    }
-
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
-    }
+  .destination-img{
+    width: 600px;
+    .round-borders (15px, hidden); 
   }
+}
+.content-pick{
+  .layout(wrap, row);
+  .align(10px, 10px);
+.destination{
+  width: 32%;
+  .btn{
+        background-color:@button-bg;
+        border: none;
+        cursor: pointer;
+        color: @font-color;
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        .round-borders (12px, hidden);
 
-  .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
-
-    img {
-      border-radius: 10px;
-    }
   }
-
-  .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
-
-    .destination {
-      width: 30%;
-      margin-bottom: 30px;
-    }
-  }
-}// home
+}
+}

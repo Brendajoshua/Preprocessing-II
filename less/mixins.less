@@ -1,10 +1,32 @@
 // Mixins in here
 
-header {
-    .flex-baseline(space-between);
-    padding: 1rem;
+.justify(@content) {
+    justify-content: @content;
     
-    @mobileview {
-        flex-direction: column;
-    }
+}
+
+.section-border(@color) {
+    border-bottom: 2px dashed @color;
+}
+
+.section-container {
+    .justify(space-between)
+}
+.section-container2 {
+    .justify(center)
+}
+
+.round-borders (@radius, @flow) {
+    border-radius: @radius;
+    overflow: @flow;
+}
+
+.align(@margin, @padding){
+	margin-top: @margin;
+    padding: @padding;
+}
+.layout(@wrap, @direction){
+	display: flex;
+	flex-direction: @direction;
+	flex-wrap: @wrap;
 }
